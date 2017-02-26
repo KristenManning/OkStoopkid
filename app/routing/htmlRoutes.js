@@ -12,7 +12,7 @@ router.get("/", function(req, res) {
 
 // Create all our routes and set up logic within those routes where required.
 router.get("/survey", function(req, res) {
-		res.send("SURVEY");
+		res.sendFile(path.join(__dirname, "../public/survey.html"));
 	
 });
 
