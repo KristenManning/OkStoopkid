@@ -12,7 +12,11 @@ router.get("/friends", function(req, res) {
 
 
 router.post("/friends", function(req, res){
-	res.send("HELLOOO");
+	var name = "Fermi"
+	var answers = [req.body.q1,req.body.q2,req.body.q3]
+	var fermi = new friend.Friend(name, answers)
+	console.log(fermi)
+	res.redirect('/')
 });
 
 
