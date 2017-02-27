@@ -1,250 +1,262 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css?family=Asap:700i" rel="stylesheet">
+	<!-- JQuery -->
+	<script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+	<!-- Bootstrap w/ superhero swatch -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css" rel="stylesheet" integrity="sha384-Xqcy5ttufkC3rBa8EdiAyA1VgOGrmel2Y+wxm4K3kI3fcjTWlDWrlnxyD6hOi3PF" crossorigin="anonymous">
 
-<link href="https://fonts.googleapis.com/css?family=Asap:700i" rel="stylesheet">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-<style type="text/css">
-	
-
-body{
-}
-
-h1{
-	font-family: 'Asap', sans-serif;
-	font-size: 100px;
-
-}
-
-h2{
-}
-
-h3{
-}
-
-p{
-
-}
-
-.slider-selection {
-	background: #BABABA;
-}
-
-</style>
-<!-- JQuery -->
-<script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
-<!-- CSS Reset -->
-<link rel="stylesheet" type="text/css" href="./css/reset.css">
-<!-- Bootstrap w/ superhero swatch -->
-<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css" rel="stylesheet" integrity="sha384-Xqcy5ttufkC3rBa8EdiAyA1VgOGrmel2Y+wxm4K3kI3fcjTWlDWrlnxyD6hOi3PF" crossorigin="anonymous">
-<!-- Slider Feature -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.7.2/bootstrap-slider.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.7.2/css/bootstrap-slider.css">
-<script type="text/javascript">
-	$(document).ready(function() {
-
-		alert("hi")
-	// With JQuery
-	$('.question-slider').slider({
-		formatter: function(value) {
-			return 'Current value: ' + value;
+	<!-- Custom CSS -->
+	<style type="text/css">
+		/*Logo Font*/
+		h1{
+			font-family: 'Asap', sans-serif;
+			font-size: 100px;
 		}
-	});
+		/*Question Response Sliders*/
+		.slider-selection {
+			background: #BABABA;
+		}
 
-	});
-</script>
-<!-- Custom CSS -->
-<link rel="stylesheet" type="text/css" href="css/style.css">
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css?family=Asap:700i" rel="stylesheet">
+	</style>
+
+	<!-- Slider Feature CDN -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.7.2/bootstrap-slider.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.7.2/css/bootstrap-slider.css">
+
+	<!-- Slider JS -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('.question-slider').slider({
+				formatter: function(value) {
+					return value;
+				}
+			});
+
+			$('.btn-info').click(function(){
+			    $('#match-modal').modal()  
+			});
+		  
+		});
+	</script>
+
 
 	<title>Survey | okstoopkid</title>
+
 </head>
 <body>
-<h1>okstoopkid</h1>
-this is the survey page. 
+	<h1>okstoopkid</h1>
 
-<form action="/api/friends" method="POST">
+	<form action="/api/friends" method="POST">
 
-	<div class="container">
+		<div class="container">
 
-	  	<div class="row">
-		    <div class="col-md-1">
-		    </div>
-		   	<div class="col-md-3">
-		    </div>
-		   	<div class="col-md-4">
+		  	<div class="row">
+			    <div class="col-md-1">
+			    </div>
+			   	<div class="col-md-3">
+			    </div>
+			   	<div class="col-md-4">
 
-		   		<p> This is question 1 </p>
+			   		<p> This is question 1 </p>
 
-				<input name="q1" class="question-slider" data-slider-id='ex1Slider' type="text" data-slider-min="1" data-slider-max="5" data-slider-step="1" data-slider-value="3"/>
-		    </div>
-		    <div class="col-md-3">
-		    </div>
-		   
+					<input name="q1" class="question-slider" data-slider-id='ex1Slider' type="text" data-slider-min="1" data-slider-max="5" data-slider-step="1" data-slider-value="3"/>
+			    </div>
+			    <div class="col-md-3">
+			    </div>
+			   
+			</div>
+
+			<div class="row">
+			    <div class="col-md-1">
+			    </div>
+			   	<div class="col-md-3">
+			    </div>
+			   	<div class="col-md-4">
+
+			   		<p> This is question 1 </p>
+
+					<input name="q2" class="question-slider" data-slider-id='ex1Slider' type="text" data-slider-min="1" data-slider-max="5" data-slider-step="1" data-slider-value="3"/>
+			    </div>
+			    <div class="col-md-3">
+			    </div>
+			   
+			</div>
+
+			<div class="row">
+			    <div class="col-md-1">
+			    </div>
+			   	<div class="col-md-3">
+			    </div>
+			   	<div class="col-md-4">
+
+			   		<p> This is question 1 </p>
+
+					<input name="q3" class="question-slider" data-slider-id='ex1Slider' type="text" data-slider-min="1" data-slider-max="5" data-slider-step="1" data-slider-value="3"/>
+			    </div>
+			    <div class="col-md-3">
+			    </div>
+			   
+			</div>
+
+			<div class="row">
+			    <div class="col-md-1">
+			    </div>
+			   	<div class="col-md-3">
+			    </div>
+			   	<div class="col-md-4">
+
+			   		<p> This is question 1 </p>
+
+					<input name="q4" class="question-slider" data-slider-id='ex1Slider' type="text" data-slider-min="1" data-slider-max="5" data-slider-step="1" data-slider-value="3"/>
+			    </div>
+			    <div class="col-md-3">
+			    </div>
+			   
+			</div>
+
+			<div class="row">
+			    <div class="col-md-1">
+			    </div>
+			   	<div class="col-md-3">
+			    </div>
+			   	<div class="col-md-4">
+
+			   		<p> This is question 1 </p>
+
+					<input name="q5" class="question-slider" data-slider-id='ex1Slider' type="text" data-slider-min="1" data-slider-max="5" data-slider-step="1" data-slider-value="3"/>
+			    </div>
+			    <div class="col-md-3">
+			    </div>
+			   
+			</div>
+
+			<div class="row">
+			    <div class="col-md-1">
+			    </div>
+			   	<div class="col-md-3">
+			    </div>
+			   	<div class="col-md-4">
+
+			   		<p> This is question 1 </p>
+
+					<input name="q6" class="question-slider" data-slider-id='ex1Slider' type="text" data-slider-min="1" data-slider-max="5" data-slider-step="1" data-slider-value="3"/>
+			    </div>
+			    <div class="col-md-3">
+			    </div>
+			   
+			</div>
+
+			<div class="row">
+			    <div class="col-md-1">
+			    </div>
+			   	<div class="col-md-3">
+			    </div>
+			   	<div class="col-md-4">
+
+			   		<p> This is question 1 </p>
+
+					<input name="q7" class="question-slider" data-slider-id='ex1Slider' type="text" data-slider-min="1" data-slider-max="5" data-slider-step="1" data-slider-value="3"/>
+			    </div>
+			    <div class="col-md-3">
+			    </div>
+			   
+			</div>
+
+			<div class="row">
+			    <div class="col-md-1">
+			    </div>
+			   	<div class="col-md-3">
+			    </div>
+			   	<div class="col-md-4">
+
+			   		<p> This is question 1 </p>
+
+					<input name="q8" class="question-slider" data-slider-id='ex1Slider' type="text" data-slider-min="1" data-slider-max="5" data-slider-step="1" data-slider-value="3"/>
+			    </div>
+			    <div class="col-md-3">
+			    </div>
+			   
+			</div>
+
+			<div class="row">
+			    <div class="col-md-1">
+			    </div>
+			   	<div class="col-md-3">
+			    </div>
+			   	<div class="col-md-4">
+
+			   		<p> This is question 1 </p>
+
+					<input name="q9" class="question-slider" data-slider-id='ex1Slider' type="text" data-slider-min="1" data-slider-max="5" data-slider-step="1" data-slider-value="3"/>
+			    </div>
+			    <div class="col-md-3">
+			    </div>
+			   
+			</div>
+
+			<div class="row">
+			    <div class="col-md-1">
+			    </div>
+			   	<div class="col-md-3">
+			    </div>
+			   	<div class="col-md-4">
+
+			   		<p> This is question 1 </p>
+
+					<input name="q10" class="question-slider" data-slider-id='ex1Slider' type="text" data-slider-min="1" data-slider-max="5" data-slider-step="1" data-slider-value="3"/>
+			    </div>
+			    <div class="col-md-3">
+			    </div>
+			   
+			</div>
+
+			<div class="row">
+			    <div class="col-md-1">
+			    </div>
+			   	<div class="col-md-3">
+			    </div>
+			   	<div class="col-md-4">
+					<input type="submit" class="btn btn-info" value="Submit Button">
+			    </div>
+			    <div class="col-md-3">
+			    </div>
+			   
+			</div>
+		
+
 		</div>
 
-		<div class="row">
-		    <div class="col-md-1">
-		    </div>
-		   	<div class="col-md-3">
-		    </div>
-		   	<div class="col-md-4">
+	</form>
 
-		   		<p> This is question 1 </p>
-
-				<input name="q2" class="question-slider" data-slider-id='ex1Slider' type="text" data-slider-min="1" data-slider-max="5" data-slider-step="1" data-slider-value="3"/>
-		    </div>
-		    <div class="col-md-3">
-		    </div>
-		   
-		</div>
-
-		<div class="row">
-		    <div class="col-md-1">
-		    </div>
-		   	<div class="col-md-3">
-		    </div>
-		   	<div class="col-md-4">
-
-		   		<p> This is question 1 </p>
-
-				<input name="q3" class="question-slider" data-slider-id='ex1Slider' type="text" data-slider-min="1" data-slider-max="5" data-slider-step="1" data-slider-value="3"/>
-		    </div>
-		    <div class="col-md-3">
-		    </div>
-		   
-		</div>
-
-		<div class="row">
-		    <div class="col-md-1">
-		    </div>
-		   	<div class="col-md-3">
-		    </div>
-		   	<div class="col-md-4">
-
-		   		<p> This is question 1 </p>
-
-				<input name="q4" class="question-slider" data-slider-id='ex1Slider' type="text" data-slider-min="1" data-slider-max="5" data-slider-step="1" data-slider-value="3"/>
-		    </div>
-		    <div class="col-md-3">
-		    </div>
-		   
-		</div>
-
-		<div class="row">
-		    <div class="col-md-1">
-		    </div>
-		   	<div class="col-md-3">
-		    </div>
-		   	<div class="col-md-4">
-
-		   		<p> This is question 1 </p>
-
-				<input name="q5" class="question-slider" data-slider-id='ex1Slider' type="text" data-slider-min="1" data-slider-max="5" data-slider-step="1" data-slider-value="3"/>
-		    </div>
-		    <div class="col-md-3">
-		    </div>
-		   
-		</div>
-
-		<div class="row">
-		    <div class="col-md-1">
-		    </div>
-		   	<div class="col-md-3">
-		    </div>
-		   	<div class="col-md-4">
-
-		   		<p> This is question 1 </p>
-
-				<input name="q6" class="question-slider" data-slider-id='ex1Slider' type="text" data-slider-min="1" data-slider-max="5" data-slider-step="1" data-slider-value="3"/>
-		    </div>
-		    <div class="col-md-3">
-		    </div>
-		   
-		</div>
-
-		<div class="row">
-		    <div class="col-md-1">
-		    </div>
-		   	<div class="col-md-3">
-		    </div>
-		   	<div class="col-md-4">
-
-		   		<p> This is question 1 </p>
-
-				<input name="q7" class="question-slider" data-slider-id='ex1Slider' type="text" data-slider-min="1" data-slider-max="5" data-slider-step="1" data-slider-value="3"/>
-		    </div>
-		    <div class="col-md-3">
-		    </div>
-		   
-		</div>
-
-		<div class="row">
-		    <div class="col-md-1">
-		    </div>
-		   	<div class="col-md-3">
-		    </div>
-		   	<div class="col-md-4">
-
-		   		<p> This is question 1 </p>
-
-				<input name="q8" class="question-slider" data-slider-id='ex1Slider' type="text" data-slider-min="1" data-slider-max="5" data-slider-step="1" data-slider-value="3"/>
-		    </div>
-		    <div class="col-md-3">
-		    </div>
-		   
-		</div>
-
-		<div class="row">
-		    <div class="col-md-1">
-		    </div>
-		   	<div class="col-md-3">
-		    </div>
-		   	<div class="col-md-4">
-
-		   		<p> This is question 1 </p>
-
-				<input name="q9" class="question-slider" data-slider-id='ex1Slider' type="text" data-slider-min="1" data-slider-max="5" data-slider-step="1" data-slider-value="3"/>
-		    </div>
-		    <div class="col-md-3">
-		    </div>
-		   
-		</div>
-
-		<div class="row">
-		    <div class="col-md-1">
-		    </div>
-		   	<div class="col-md-3">
-		    </div>
-		   	<div class="col-md-4">
-
-		   		<p> This is question 1 </p>
-
-				<input name="q10" class="question-slider" data-slider-id='ex1Slider' type="text" data-slider-min="1" data-slider-max="5" data-slider-step="1" data-slider-value="3"/>
-		    </div>
-		    <div class="col-md-3">
-		    </div>
-		   
-		</div>
-
-		<div class="row">
-		    <div class="col-md-1">
-		    </div>
-		   	<div class="col-md-3">
-		    </div>
-		   	<div class="col-md-4">
-				<input type="submit" class="btn btn-info" value="Submit Button">
-		    </div>
-		    <div class="col-md-3">
-		    </div>
-		   
-		</div>
+	<!-- Modal -->
+	<div id="match-modal" class="modal fade" tabindex="-1" role="dialog">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 id="match-modal-title" class="modal-title"></h4>
+	      </div>
+	      <div id="match-modal-body" class="modal-body">
+	    
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
 	
+	<script type="text/javascript">
+		$.get("/api/friends", function(data) {
+	        $("#match-modal-body").append(JSON.stringify(data));
+	    });
+	</script>
 
-	</div>
-
-</form>
 
 </body>
 </html>
