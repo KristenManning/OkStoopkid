@@ -33,12 +33,33 @@
 		.img-holder{
 			height: 140px;
 			text-align: center;
+			margin-top: 10px;
+			margin-bottom: 10px;
 		}
 
 		img{
 			height: 140px;
 			width: auto;
 
+		}
+
+		.odd{
+			background-color: #A36D5C;
+			opacity: 0.8;
+		}
+
+
+		.even{
+			background-color: #545763;
+			opacity: 0.8;
+		}
+
+		.btn-lg{
+			margin: 10px;
+		}
+
+		.modal-body{
+			text-align: center;
 		}
 
 	</style>
@@ -111,7 +132,7 @@
 	<form action="/api/friends" method="POST">
 
 		<div class="container">
-		  	<div class="row">
+		  	<div class="row odd">
 			    <div class="col-md-1">
 			    </div>
 			   	<div class="col-md-3">
@@ -127,7 +148,7 @@
 			   
 			</div>
 
-		  	<div class="row">
+		  	<div class="row even">
 			    <div class="col-md-1">
 			    </div>
 			   	<div class="col-md-3">
@@ -143,7 +164,7 @@
 			   
 			</div>			
 
-		  	<div class="row">
+		  	<div class="row odd">
 			    <div class="col-md-1">
 			    </div>
 			   	<div class="col-md-3">
@@ -165,7 +186,7 @@
 			   
 			</div>
 
-			<div class="row">
+			<div class="row even">
 			    <div class="col-md-1">
 			    </div>
 			   	<div class="col-md-3">
@@ -187,7 +208,7 @@
 			   
 			</div>
 
-			<div class="row">
+			<div class="row odd">
 			    <div class="col-md-1">
 			    </div>
 			   	<div class="col-md-3">
@@ -209,7 +230,7 @@
 			   
 			</div>
 
-			<div class="row">
+			<div class="row even">
 			    <div class="col-md-1">
 			    </div>
 			   	<div class="col-md-3">
@@ -231,7 +252,7 @@
 			   
 			</div>
 
-			<div class="row">
+			<div class="row odd">
 			    <div class="col-md-1">
 			    </div>
 			   	<div class="col-md-3">
@@ -253,7 +274,7 @@
 			   
 			</div>
 
-			<div class="row">
+			<div class="row even">
 			    <div class="col-md-1">
 			    </div>
 			   	<div class="col-md-3">
@@ -275,7 +296,7 @@
 			   
 			</div>
 
-			<div class="row">
+			<div class="row odd">
 			    <div class="col-md-1">
 			    </div>
 			   	<div class="col-md-3">
@@ -297,7 +318,7 @@
 			   
 			</div>
 
-			<div class="row">
+			<div class="row even">
 			    <div class="col-md-1">
 			    </div>
 			   	<div class="col-md-3">
@@ -319,7 +340,7 @@
 			   
 			</div>
 
-			<div class="row">
+			<div class="row odd">
 			    <div class="col-md-1">
 			    </div>
 			   	<div class="col-md-3">
@@ -341,7 +362,7 @@
 			   
 			</div>
 
-			<div class="row">
+			<div class="row even">
 			    <div class="col-md-1">
 			    </div>
 			   	<div class="col-md-3">
@@ -363,14 +384,14 @@
 			   
 			</div>
 
-			<div class="row">
+			<div class="row odd">
 			    <div class="col-md-1">
 			    </div>
 			   	<div class="col-md-3">
 
 			    </div>
 			   	<div class="col-md-4">
-					<input type="submit" class="btn btn-info" value="Submit Button">
+					<input type="submit" class="btn-lg btn-info" value="Submit">
 			    </div>
 			    <div class="col-md-3">
 

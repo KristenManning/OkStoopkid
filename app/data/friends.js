@@ -17,6 +17,30 @@ Friend = function(name, photo, answers){
 kristen = {
 	name: "Kristen",
 	photo: "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png",
+	answers: [1,2,2,3,4,5,4,3,2,2]
+}
+
+frankie = {
+	name: "Frankie",
+	photo: "https://wallpaperbrowse.com/static/pixadb/assets/img/logo.png",
+	answers: [1,1,2,2,3,3,4,4,5,5]
+}
+
+kristen = {
+	name: "Kristen",
+	photo: "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png",
+	answers: [5,5,4,4,3,3,2,2,1,1]
+}
+
+frankie = {
+	name: "Frankie",
+	photo: "https://wallpaperbrowse.com/static/pixadb/assets/img/logo.png",
+	answers: [1,1,2,3,4,5,4,3,2,1]
+}
+
+kristen = {
+	name: "Kristen",
+	photo: "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png",
 	answers: [1,1,2,3,4,5,4,3,2,1]
 }
 
