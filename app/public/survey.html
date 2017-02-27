@@ -80,7 +80,7 @@
 		var comp = function(friend1, friend2){
 			var dif = 0 
 			for (var a = 0; a < 10; a++) {
-				dif += Math.abs(int(friend1.answers[a]) - int(friend2.answers[a]))
+				dif += Math.abs(parseInt(friend1.answers[a]) - parseInt(friend2.answers[a]))
 			}
 			return dif 
 		}
