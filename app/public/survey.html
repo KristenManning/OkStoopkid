@@ -17,9 +17,28 @@
 			font-family: 'Asap', sans-serif;
 			font-size: 100px;
 		}
+
+		p{
+			font-size: 22px;
+		}
 		/*Question Response Sliders*/
 		.slider-selection {
 			background: #BABABA;
+		}
+
+		form{
+			text-align: center;
+		}
+
+		.img-holder{
+			height: 140px;
+			text-align: center;
+		}
+
+		img{
+			height: 140px;
+			width: auto;
+
 		}
 
 	</style>
@@ -71,7 +90,7 @@
 						$("#match-modal-title").html(bff.name);
 						$("#match-modal-body").html('<img src="'+bff.photo+'">');
 	    			});
-			    }, 2000);
+			    }, 1800);
 				
 			});
 			
@@ -83,11 +102,11 @@
 	</script>
 
 
-	<title>Survey | okstoopkid</title>
+	<title>Survey | OkStoopkid</title>
 
 </head>
 <body>
-	<h1>okstoopkid</h1>
+	<h1>OkStoopkid</h1>
 
 	<form action="/api/friends" method="POST">
 
@@ -104,7 +123,7 @@
 					<input name="name" type="text"/>
 			    </div>
 			    <div class="col-md-3">
-			    </div>
+			    </div><br><br><br><br>
 			   
 			</div>
 
@@ -120,7 +139,7 @@
 					<input name="photo" type="text"/>
 			    </div>
 			    <div class="col-md-3">
-			    </div>
+			    </div><br><br><br><br>
 			   
 			</div>			
 
@@ -128,15 +147,21 @@
 			    <div class="col-md-1">
 			    </div>
 			   	<div class="col-md-3">
+			   		<div class="img-holder">
+			   			<img src="http://vignette2.wikia.nocookie.net/catdog/images/6/69/274px-Cat.gif/revision/latest?cb=20120424224856">
+			   		</div>
 			    </div>
 			   	<div class="col-md-4">
 
-			   		<p> This is question 1 </p>
+			   		<p> Cat or Dog? </p>
 
 					<input name="q1" class="question-slider" data-slider-id='ex1Slider' type="text" data-slider-min="1" data-slider-max="5" data-slider-step="1" data-slider-value="3"/>
 			    </div>
 			    <div class="col-md-3">
-			    </div>
+			    	<div class="img-holder">
+			    		<img src="http://vignette2.wikia.nocookie.net/catdog/images/6/6c/291px-Dog.jpg/revision/latest?cb=20120424015433">
+			    	</div>
+			    </div><br><br>
 			   
 			</div>
 
@@ -144,15 +169,21 @@
 			    <div class="col-md-1">
 			    </div>
 			   	<div class="col-md-3">
+			   		<div class="img-holder">
+			   			<img src="http://s2.quickmeme.com/img/4d/4dd1aadb39559195496a982851baf2603eee9217cd19f13724f93c63177f5f00.jpg">
+			   		</div>
 			    </div>
 			   	<div class="col-md-4">
 
-			   		<p> This is question 1 </p>
+			   		<p> F is for... </p>
 
 					<input name="q2" class="question-slider" data-slider-id='ex1Slider' type="text" data-slider-min="1" data-slider-max="5" data-slider-step="1" data-slider-value="3"/>
 			    </div>
 			    <div class="col-md-3">
-			    </div>
+			    	<div class="img-holder">
+			    		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKcEZW5jZkOCr8Adf0W6U4p8Z-2Pf4tYGJi_pZ-yryhj-fqXj7Fg">
+			    	</div>
+			    </div><br><br>
 			   
 			</div>
 
@@ -160,15 +191,21 @@
 			    <div class="col-md-1">
 			    </div>
 			   	<div class="col-md-3">
+			   		<div class="img-holder">
+			   			<img src="http://vignette1.wikia.nocookie.net/rugrats/images/1/19/Angelica_Pickles.png/revision/latest?cb=20130515182442">
+			   		</div>
 			    </div>
 			   	<div class="col-md-4">
 
-			   		<p> This is question 1 </p>
+			   		<p> Who is the meaner bully? </p>
 
 					<input name="q3" class="question-slider" data-slider-id='ex1Slider' type="text" data-slider-min="1" data-slider-max="5" data-slider-step="1" data-slider-value="3"/>
 			    </div>
 			    <div class="col-md-3">
-			    </div>
+			    	<div class="img-holder">
+			    		<img src="https://img.buzzfeed.com/buzzfeed-static/static/2015-01/4/13/enhanced/webdr07/anigif_enhanced-1331-1420395378-2_preview.gif">
+			    	</div>
+			    </div><br><br>
 			   
 			</div>
 
@@ -176,15 +213,21 @@
 			    <div class="col-md-1">
 			    </div>
 			   	<div class="col-md-3">
+			   		<div class="img-holder">
+			   			<img src="http://nick-intl.mtvnimages.com/uri/mgid:file:gsp:scenic:/international/mundonick.com/nickv2/Shows/Rocket-Power/Property-Headers/ROCKETPOWER_property-header-480x270.png?height=0&width=480&matte=true&crop=false">
+			   		</div>
 			    </div>
 			   	<div class="col-md-4">
 
-			   		<p> This is question 1 </p>
+			   		<p> Would you rather spend a day snowboarding or surfing? </p>
 
 					<input name="q4" class="question-slider" data-slider-id='ex1Slider' type="text" data-slider-min="1" data-slider-max="5" data-slider-step="1" data-slider-value="3"/>
 			    </div>
 			    <div class="col-md-3">
-			    </div>
+			    	<div class="img-holder">
+			    		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd_dzdpVMS15EsQrHU7l0QdQCMDjS7CouvTKvKr-GEbrDtVBp4Xw">
+			    	</div>
+			    </div><br><br>
 			   
 			</div>
 
@@ -192,15 +235,21 @@
 			    <div class="col-md-1">
 			    </div>
 			   	<div class="col-md-3">
+			   		<div class="img-holder">
+			   			<img src="http://vignette2.wikia.nocookie.net/rugrats/images/f/f2/Lou_Pickles_(All_Grown_Up).png/revision/latest?cb=20160919021450">
+			   		</div>
 			    </div>
 			   	<div class="col-md-4">
 
-			   		<p> This is question 1 </p>
+			   		<p> Who is the cooler grandpa? </p>
 
 					<input name="q5" class="question-slider" data-slider-id='ex1Slider' type="text" data-slider-min="1" data-slider-max="5" data-slider-step="1" data-slider-value="3"/>
 			    </div>
 			    <div class="col-md-3">
-			    </div>
+			    	<div class="img-holder">
+			    		<img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSzPbTph_O0AHWrhhi8ZPru_h-EiXdvwKQL0Ixv4HENaxRrOmTCsA">
+			    	</div>
+			    </div><br><br>
 			   
 			</div>
 
@@ -208,15 +257,21 @@
 			    <div class="col-md-1">
 			    </div>
 			   	<div class="col-md-3">
+			   		<div class="img-holder">
+			   			<img src="http://vignette1.wikia.nocookie.net/areyouafraidofthedark/images/7/77/Eplogo13.png/revision/latest?cb=20150123000918">
+			   		</div>
 			    </div>
 			   	<div class="col-md-4">
 
-			   		<p> This is question 1 </p>
+			   		<p> Which is scarier? </p>
 
 					<input name="q6" class="question-slider" data-slider-id='ex1Slider' type="text" data-slider-min="1" data-slider-max="5" data-slider-step="1" data-slider-value="3"/>
 			    </div>
 			    <div class="col-md-3">
-			    </div>
+			    	<div class="img-holder">
+			    		<img src="http://1.bp.blogspot.com/-VaGCywy9FVY/UnF1b5M7y1I/AAAAAAAAE4g/xuASTznU11k/s1600/The+Tale+of+Silver+Sight.png">
+			    	</div>
+			    </div><br><br>
 			   
 			</div>
 
@@ -224,15 +279,21 @@
 			    <div class="col-md-1">
 			    </div>
 			   	<div class="col-md-3">
+			   		<div class="img-holder">
+			   			<img src="https://s-media-cache-ak0.pinimg.com/736x/7e/3e/fc/7e3efcb33dd7c933843fcc40095c1a4d.jpg">
+			   		</div>
 			    </div>
 			   	<div class="col-md-4">
 
-			   		<p> This is question 1 </p>
+			   		<p> Which dog would you rather have? </p>
 
 					<input name="q7" class="question-slider" data-slider-id='ex1Slider' type="text" data-slider-min="1" data-slider-max="5" data-slider-step="1" data-slider-value="3"/>
 			    </div>
 			    <div class="col-md-3">
-			    </div>
+			    	<div class="img-holder">
+			    		<img src="http://vignette1.wikia.nocookie.net/nickelodeon/images/0/08/Porkchop.png/revision/latest?cb=20160804045840">
+			    	</div>
+			    </div><br><br>
 			   
 			</div>
 
@@ -240,15 +301,21 @@
 			    <div class="col-md-1">
 			    </div>
 			   	<div class="col-md-3">
+			   		<div class="img-holder">
+			   			<img src="http://static.tvtropes.org/pmwiki/pub/images/371_40025295e3.jpg">
+			   		</div>
 			    </div>
 			   	<div class="col-md-4">
 
-			   		<p> This is question 1 </p>
+			   		<p> Who looks more like a beaver? </p>
 
 					<input name="q8" class="question-slider" data-slider-id='ex1Slider' type="text" data-slider-min="1" data-slider-max="5" data-slider-step="1" data-slider-value="3"/>
 			    </div>
 			    <div class="col-md-3">
-			    </div>
+			    	<div class="img-holder">
+			    		<img src="http://vignette4.wikia.nocookie.net/nickelodeon/images/5/5e/Daggett.png/revision/latest?cb=20110612162954">
+			    	</div>
+			    </div><br><br>
 			   
 			</div>
 
@@ -256,15 +323,21 @@
 			    <div class="col-md-1">
 			    </div>
 			   	<div class="col-md-3">
+			   		<div class="img-holder">
+			   			<img src="http://vignette1.wikia.nocookie.net/spongebob/images/a/a0/Sandy_Cheeks.svg/revision/latest/scale-to-width-down/200?cb=20100920201409">
+			   		</div>
 			    </div>
 			   	<div class="col-md-4">
 
-			   		<p> This is question 1 </p>
+			   		<p> Would you rather be a squirrel under water or a lobster on land? </p>
 
 					<input name="q9" class="question-slider" data-slider-id='ex1Slider' type="text" data-slider-min="1" data-slider-max="5" data-slider-step="1" data-slider-value="3"/>
 			    </div>
 			    <div class="col-md-3">
-			    </div>
+			    	<div class="img-holder">
+			    		<img src="http://4.bp.blogspot.com/_KqQsYqm5HXQ/TQAgapTf2dI/AAAAAAAAAFQ/jUPvEnuMZ3o/s1600/Amanda%2BShow.jpg">
+			    	</div>
+			    </div><br><br>
 			   
 			</div>
 
@@ -272,15 +345,21 @@
 			    <div class="col-md-1">
 			    </div>
 			   	<div class="col-md-3">
+			   		<div class="img-holder">
+			   			<img src="http://media.sbmania.net/pictures/2a/63.png">
+			   		</div>
 			    </div>
 			   	<div class="col-md-4">
 
-			   		<p> This is question 1 </p>
+			   		<p> Who's a better musician? </p>
 
 					<input name="q10" class="question-slider" data-slider-id='ex1Slider' type="text" data-slider-min="1" data-slider-max="5" data-slider-step="1" data-slider-value="3"/>
 			    </div>
 			    <div class="col-md-3">
-			    </div>
+			    	<div class="img-holder">
+			    		<img src="https://i.ytimg.com/vi/7lPPuZzIB_I/hqdefault.jpg">
+			    	</div>
+			    </div><br><br>
 			   
 			</div>
 
@@ -288,11 +367,13 @@
 			    <div class="col-md-1">
 			    </div>
 			   	<div class="col-md-3">
+
 			    </div>
 			   	<div class="col-md-4">
 					<input type="submit" class="btn btn-info" value="Submit Button">
 			    </div>
 			    <div class="col-md-3">
+
 			    </div>
 			   
 			</div>
@@ -308,10 +389,11 @@
 	    <div class="modal-content">
 	      <div class="modal-header">
 	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-	        <h4 id="match-modal-title" class="modal-title"></h4>
+	        <h4 id="match-modal-title" class="modal-title">Searching for your perfect match...</h4>
 	      </div>
 	      <div id="match-modal-body" class="modal-body">
-	    	Searching for your perfect match...
+
+	      <img src="https://nomeatballs.files.wordpress.com/2012/08/stoop-kid-steps-off.png?w=450&h=342">
 	      </div>
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
