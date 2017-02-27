@@ -14,11 +14,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // 	res.send('hi')
 // });
 // Import routes and give the server access to them.
-var htmlRoutes = require("./app/routing/htmlRoutes.js");
 var apiRoutes = require("./app/routing/apiRoutes.js");
+var htmlRoutes = require("./app/routing/htmlRoutes.js");
 
-app.use("/", htmlRoutes);
 app.use("/api", apiRoutes);
+app.use("/", htmlRoutes);
+
 
 app.listen(port, function(){
 	console.log('listening on port ' + port)
