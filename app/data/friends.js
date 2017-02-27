@@ -1,37 +1,29 @@
-Friend = function(name, answers, all_friends){
+Friend = function(name, photo, answers){
 	this.name = name;
+	this.photo = photo; 
 	this.answers = answers; 
-	this.compare = function(){
-		console.log("comparing")
-		};
-	this.add_to_all_friends = function(){
-		console.log("adding to all friends " + all_friends[0])
-		};
-	this.top_friend = "";
+	this.hi = function(){
+		console.log("HI")
+	};
+	this.compare = function(friend){
+		var dif = 0 
+		for (var a = 0; a < this.answers.length; a++) {
+			dif += Math.abs(this.answers[a] - friend.answers[a])
+		}
+		return dif 
+		}
 };
 
 kristen = {
 	name: "Kristen",
-	answers: [1,1,2,3,4,5,4,3,2,1],
-	compare: function(){
-		console.log("comparing")
-		},
-	add_to_all_friends: function(){
-		console.log("adding to all friends " + all_friends[0])
-		}
-
+	photo: "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png",
+	answers: [1,1,2,3,4,5,4,3,2,1]
 }
 
 frankie = {
-	name: "Kristen",
-	answers: [1,1,2,3,4,5,4,3,2,1],
-	compare: function(){
-		console.log("comparing")
-		},
-	add_to_all_friends: function(){
-		console.log("adding to all friends " + all_friends[0])
-		}
-
+	name: "Frankie",
+	photo: "https://wallpaperbrowse.com/static/pixadb/assets/img/logo.png",
+	answers: [1,1,2,3,4,5,4,3,2,1]
 }
 
 all_friends = [kristen, frankie]

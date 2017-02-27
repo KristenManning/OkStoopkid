@@ -30,6 +30,31 @@
 
 	<!-- Slider JS -->
 	<script type="text/javascript">
+
+		var comp = function(friend1, friend2){
+			var dif = 0 
+			for (var a = 0; a < 10; a++) {
+				dif += Math.abs(friend1.answers[a] - friend2.answers[a])
+			}
+			return dif 
+		}
+
+		var get_best_friend = function(all_friends){
+
+			var newest_friend = all_friends[all_friends.length - 1]
+			console.log(newest_friend)
+			var friend_difs = []
+
+			for (var i = 0; i < all_friends.length - 1; i++) {
+				var dif_i = comp(all_friends[i], newest_friend)
+				if (dif_i == 0){
+					return all_friends[i]
+				}
+				friend_difs.push(dif_i)
+			}
+
+			return all_friends[friend_difs.indexOf(Math.min.apply(null, friend_difs))]
+		}; 
 		$(document).ready(function() {
 			$('.question-slider').slider({
 				formatter: function(value) {
@@ -38,9 +63,22 @@
 			});
 
 			$('.btn-info').click(function(){
-			    $('#match-modal').modal()  
+				$('#match-modal').modal();
+				setTimeout(function(){ 
+					$.get("/api/friends", function(data) {
+						var bff = get_best_friend(data)
+						console.log(bff)
+						$("#match-modal-title").html(bff.name);
+						$("#match-modal-body").html('<img src="'+bff.photo+'">');
+	    			});
+			    }, 2000);
+				
 			});
-		  
+			
+
+			$('.btn-default').click(function(){
+				window.location = "/";
+		  	});
 		});
 	</script>
 
@@ -54,6 +92,37 @@
 	<form action="/api/friends" method="POST">
 
 		<div class="container">
+		  	<div class="row">
+			    <div class="col-md-1">
+			    </div>
+			   	<div class="col-md-3">
+			    </div>
+			   	<div class="col-md-4">
+
+			   		<p>Your Name: </p>
+
+					<input name="name" type="text"/>
+			    </div>
+			    <div class="col-md-3">
+			    </div>
+			   
+			</div>
+
+		  	<div class="row">
+			    <div class="col-md-1">
+			    </div>
+			   	<div class="col-md-3">
+			    </div>
+			   	<div class="col-md-4">
+
+			   		<p>Link to a photo of you: </p>
+
+					<input name="photo" type="text"/>
+			    </div>
+			    <div class="col-md-3">
+			    </div>
+			   
+			</div>			
 
 		  	<div class="row">
 			    <div class="col-md-1">
@@ -242,7 +311,7 @@
 	        <h4 id="match-modal-title" class="modal-title"></h4>
 	      </div>
 	      <div id="match-modal-body" class="modal-body">
-	    
+	    	Searching for your perfect match...
 	      </div>
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -251,11 +320,6 @@
 	  </div><!-- /.modal-dialog -->
 	</div><!-- /.modal -->
 	
-	<script type="text/javascript">
-		$.get("/api/friends", function(data) {
-	        $("#match-modal-body").append(JSON.stringify(data));
-	    });
-	</script>
 
 
 </body>

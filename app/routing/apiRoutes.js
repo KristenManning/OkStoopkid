@@ -12,11 +12,8 @@ router.get("/friends", function(req, res) {
 
 
 router.post("/friends", function(req, res){
-	var name = "Fermi"
-	var answers = [req.body.q1,req.body.q2,req.body.q3]
-	var fermi = new friend.Friend(name, answers)
-	console.log(fermi)
-	// res.redirect('/friends')
+	var answers = [req.body.q1,req.body.q2,req.body.q3,req.body.q4,req.body.q5,req.body.q6,req.body.q7,req.body.q8,req.body.q9,req.body.q10]
+	friend.all_friends.push(new friend.Friend(req.body.name, req.body.photo, answers))
 });
 
 
